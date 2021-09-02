@@ -1,6 +1,6 @@
 # AR Camera Hit Test Reticle
 
-Reticle indicates when onCameraHitTest detects a plane. Touch reticle to place object.
+Example code for using a reticle for object placement. The reticle is a quad in the center of the field of view which uses camera hit testing to find the horizontal plane. Press the reticle to place the object.
 
 Adapted from original code from here: 
 https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
