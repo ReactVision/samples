@@ -1,20 +1,15 @@
-# Viro Starter Kit
+# AR Camera Hit Test Reticle
 
-This is a blank React Native project setup with Viro.
+Reticle indicates when onCameraHitTest detects a plane. Touch reticle to place object. Seems to have more stable tracking when fixing object in the environment.
 
-## Installation
+Adapted from original code from here: 
+https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
 
-1. `git clone https://github.com/ViroCommunity/starter-kit.git`
-2. `cd starter-kit`
-3. `npm install`
-4. `npx pod-install` (iOS)
-5. `npx react-native run-android` or `npx react-native run-ios`
+## Setup Instructions:
 
-NOTE: The variant arguments are not needed for debug or release.
+1. In the app root directory, open `index.js` and change the import App line to read
+```
+import App from './code-samples/CameraHitTestReticle/App';
+```
 
-## How to Install Viro in an existing project?
-
-If you are integrating ViroReact into an existing project, have a look at our [Installation instructions](https://github.com/ViroCommunity/viro/blob/main/readmes/INSTALL.md). Please note that this does _not_ work with Expo Managed Workflows. Sorry!
-
-# Need help?
-[Reach us in Discord.](https://discord.gg/YfxDBGTxvG)
+2. Start `npm` packager server and run sample

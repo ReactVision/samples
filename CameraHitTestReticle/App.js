@@ -1,55 +1,23 @@
-import React, {useState} from 'react';
-import {StyleSheet} from 'react-native';
-import {
-  ViroARScene,
-  ViroText,
-  ViroConstants,
-  ViroARSceneNavigator,
-} from '@viro-community/react-viro';
+'use strict';
+import React, { Component } from 'react';
+import { SafeAreaView } from 'react-native';
+import { ViroARSceneNavigator } from '@viro-community/react-viro';
+import SceneAR from './SceneAR';
 
-const HelloWorldSceneAR = () => {
-  const [text, setText] = useState('Initializing AR...');
-
-  function onInitialized(state, reason) {
-    console.log('guncelleme', state, reason);
-    if (state === ViroConstants.TRACKING_NORMAL) {
-      setText('Hello World!');
-    } else if (state === ViroConstants.TRACKING_NONE) {
-      // Handle loss of tracking
-    }
+class App extends Component {
+  render() {
+    return (
+      <SafeAreaView style={{ flex: 1 }} >
+        <ViroARSceneNavigator
+          autofocus={true}
+          initialScene={{
+            scene: SceneAR,
+          }}
+          style={{ flex: 1 }}
+        />
+      </SafeAreaView>
+    );
   }
+}
 
-  return (
-    <ViroARScene onTrackingUpdated={onInitialized}>
-      <ViroText
-        text={text}
-        scale={[0.5, 0.5, 0.5]}
-        position={[0, 0, -1]}
-        style={styles.helloWorldTextStyle}
-      />
-    </ViroARScene>
-  );
-};
-
-export default () => {
-  return (
-    <ViroARSceneNavigator
-      autofocus={true}
-      initialScene={{
-        scene: HelloWorldSceneAR,
-      }}
-      style={styles.f1}
-    />
-  );
-};
-
-var styles = StyleSheet.create({
-  f1: {flex: 1},
-  helloWorldTextStyle: {
-    fontFamily: 'Arial',
-    fontSize: 30,
-    color: '#ffffff',
-    textAlignVertical: 'center',
-    textAlign: 'center',
-  },
-});
+export default App;
