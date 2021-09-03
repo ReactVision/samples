@@ -5,11 +5,13 @@ Example code for using a reticle for object placement. The reticle is a quad in 
 Adapted from original code from here: 
 https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
 
-## Setup Instructions:
+## Installation
 
-1. In the app root directory, open `index.js` and change the import App line to read
-```
-import App from './code-samples/CameraHitTestReticle/App';
-```
+1. `git clone https://github.com/ViroCommunity/samples.git`
+2. `cd samples/ARReticle`
+3. `npm install`
+4. `npx pod-install` (iOS)
+5. `npx react-native run-android` or `npx react-native run-ios`
 
-2. Start `npm` packager server and run sample
+NOTE: The variant arguments are not needed for debug or release.
+
