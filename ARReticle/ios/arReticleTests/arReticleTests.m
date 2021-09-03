@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface myviroappTests : XCTestCase
+@interface arReticleTests : XCTestCase
 
 @end
 
-@implementation myviroappTests
+@implementation arReticleTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
