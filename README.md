@@ -9,4 +9,4 @@ Samples for Viro 🐣
 4. `npx pod-install` (iOS)
 5. `npx react-native run-android` or `npx react-native run-ios`
 
-Note: in step 2. above, replace <FolderName> with the name of the folder for the sample project you would like to try.
+Note: in step 2. above, replace `<FolderName>` with the name of the folder for the sample project you would like to try.
