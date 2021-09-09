@@ -12,3 +12,7 @@ https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
 5. `npx react-native run-android` or `npx react-native run-ios`
 
 NOTE: The variant arguments are not needed for debug or release.
+
+## Jest Testing
+
+Use the command 'yarn test'
