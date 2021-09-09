@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     // Use padding vs "top"/"left" so that the entire zone is tappable
     paddingLeft : 15,
-    paddingTop : 27 + paddingTop,
+    paddingTop : 27,
   },
   exitImage : {
     height: 21,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     width : 30,
     height : 30,
     right : 15,
-    top : 24 + paddingTop,
+    top : 24,
   },
   resetImage : {
     width : 30,

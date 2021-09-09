@@ -23,8 +23,8 @@ const CautionScreen = () => {
     }
 
     return (
-        <SafeAreaView style={styles.safeArea}>
-            <Text style={styles.textStyle}>Parental supervision required. Pay attention to dangers in your physical surroundings.</Text>
+        <SafeAreaView style={styles.outerContainer}>
+            <Text style={styles.buttonText}>Parental supervision required. Pay attention to dangers in your physical surroundings.</Text>
             <Button title="Okay" onPress={onPress} />
         </SafeAreaView>
     );

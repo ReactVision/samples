@@ -121,7 +121,6 @@ class ARScreen extends Component {
   return (
     <ViroARSceneNavigator
     ref={(ref)=>{this.arNavigator = ref}}
-    apiKey={apiKey}
     viroAppProps={viroAppProps}
     initialScene={{
       scene: ARScene,
@@ -154,18 +153,18 @@ return (
 
     <View style={styles.drivingButton} >
       <Image style={styles.pedalImage} opacity={this.state.down ? 0 : 1}
-        source={require('./res/pedal_reverse.png')} />
+        source={require('../assets/pedal_reverse.png')} />
       <Image style={styles.pedalImage} opacity={!this.state.down ? 0 : 1} 
-        source={require('./res/pedal_reverse_press.png')}/>
+        source={require('../assets/pedal_reverse_press.png')}/>
       <View style={styles.pedalTouchArea} onTouchStart={this.getPressDown('down')}
       onTouchEnd={this.getPressUp('down')} />
     </View>
 
     <View style={styles.drivingButton} >
       <Image style={styles.pedalImage} opacity={this.state.up ? 0 : 1}
-        source={require('./res/pedal_accel.png')} />
+        source={require('../assets/pedal_accel.png')} />
       <Image style={styles.pedalImage} opacity={!this.state.up ? 0 : 1} 
-        source={require('./res/pedal_accel_press.png')}/>
+        source={require('../assets/pedal_accel_press.png')}/>
       <View style={styles.pedalTouchArea} onTouchStart={this.getPressDown('up')}
       onTouchEnd={this.getPressUp('up')} />
     </View>
@@ -190,7 +189,7 @@ let joystickButtonStyle = {
  */
 return (
   <View style={styles.joystickContainer} >
-    <Image style={joystickButtonStyle} source={require('./res/steering_wheel.png')}/>
+    <Image style={joystickButtonStyle} source={require('../assets/steering_wheel.png')}/>
     <View style={styles.joystickTouchArea} onTouchStart={this.joystickStart} 
     onTouchMove={this.joystickMove} onTouchEnd={this.joystickEnd} />
   </View>
@@ -203,7 +202,7 @@ return (
     style={styles.resetButton}
     onPress={this.resetCar}
     activeOpacity={0.6} >
-    <Image style={styles.resetImage} source={require('./res/icon_refresh.png')}/>
+    <Image style={styles.resetImage} source={require('../assets/icon_refresh.png')}/>
   </TouchableOpacity>
 )
 }
@@ -396,7 +395,6 @@ getInstructions() {
     justifyContent : 'center',
     top : 0,
     left : 0,
-    paddingTop : paddingTop,
   }
 
   let instructions = "Scan the ground and tap Place to begin."

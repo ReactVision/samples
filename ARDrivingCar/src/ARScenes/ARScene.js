@@ -60,7 +60,7 @@ var count = 0;
 // keeps track of the prop value!
 var shouldResetCarValue = false;
 
-export default class ARScene extends Component {
+class ARScene extends Component {
 
   constructor() {
     super();
@@ -123,7 +123,7 @@ export default class ARScene extends Component {
 
     let onCameraARHitTestCallback = this.state.isReady ? undefined : this._onCameraARHitTest
 
-    let environmentLightSource = require('./res/learner_park_1k.hdr');
+    let environmentLightSource = require('../assets/learner_park_1k.hdr');
 
     // we should pause the acceleration sound if we're not ready OR we're not either driving forward or backwards (2 & 8 bitmask)
     let shouldPauseAccelSound = !this.state.isReady || !(this.props.arSceneNavigator.viroAppProps.direction & 10)
@@ -139,9 +139,9 @@ export default class ARScene extends Component {
 
         {this._getCarModel()}
 
-        <ViroSound source={require('./res/car_ambient.mp3')} paused={!this.state.isReady} loop={true} />
-        <ViroSound source={require('./res/car_drive.mp3')} paused={shouldPauseAccelSound} loop={true} />
-        <ViroSound source={require('./res/car_idle.mp3')} paused={shouldPauseIdleSound} loop={true} volume={this.state.volumeLevel} />
+        <ViroSound source={require('../assets/car_ambient.mp3')} paused={!this.state.isReady} loop={true} />
+        <ViroSound source={require('../assets/car_drive.mp3')} paused={shouldPauseAccelSound} loop={true} />
+        <ViroSound source={require('../assets/car_idle.mp3')} paused={shouldPauseIdleSound} loop={true} volume={this.state.volumeLevel} />
 
       </ViroARScene>
     );
@@ -183,8 +183,8 @@ export default class ARScene extends Component {
     return (
       <ViroNode transformBehaviors={"billboardY"} position={this.state.planeReticleLocation}
         scale={[.5, .5, .5]} >
-        <ViroImage rotation={[-90, 0, 0]} visible={this.state.foundPlane} source={require('./res/tracking_diffuse_2.png')}/>
-        <ViroImage rotation={[-90, 0, 0]} visible={!this.state.foundPlane} source={require('./res/tracking_diffuse.png')} />
+        <ViroImage rotation={[-90, 0, 0]} visible={this.state.foundPlane} source={require('../assets/tracking_diffuse_2.png')}/>
+        <ViroImage rotation={[-90, 0, 0]} visible={!this.state.foundPlane} source={require('../assets/tracking_diffuse.png')} />
       </ViroNode>
     )
   }
@@ -208,13 +208,13 @@ export default class ARScene extends Component {
           <Viro3DObject
             ref={(car)=>{this.carRotationNode = car}}
             position={[0,0,0]}
-            source={require('./res/car_body.vrx')}
+            source={require('../assets/car_body.vrx')}
             type='VRX'
             resources={[
-              require('./res/bumblebee_Base_Color.png'),
-              require('./res/bumblebee_Metallic.jpg'),
-              require('./res/bumblebee_Roughness.jpg'),
-              require('./res/bumblebee_Normal_OpenGL.jpg'),
+              require('../assets/bumblebee_Base_Color.png'),
+              require('../assets/bumblebee_Metallic.jpg'),
+              require('../assets/bumblebee_Roughness.jpg'),
+              require('../assets/bumblebee_Normal_OpenGL.jpg'),
             ]} />
 
           {/* Front left - need 2 containers, 1 for the side-to-side rotation, 1 for spin*/}
@@ -222,14 +222,14 @@ export default class ARScene extends Component {
             position={[-.610, .363, -1.336]} >
             <ViroNode ref={(wheel)=>{this.frontLeftWheel = wheel}} >
               <Viro3DObject
-                source={require('./res/car_wheels.vrx')}
+                source={require('../assets/car_wheels.vrx')}
                 type='VRX'
                 rotation={[0, 180, 0]} // the left wheels need to be rotated 180
                 resources={[
-                  require('./res/wheels_Base_Color.jpg'),
-                  require('./res/wheels_Metallic.jpg'),
-                  require('./res/wheels_Roughness.jpg'),
-                  require('./res/wheels_Normal_OpenGL.jpg'),
+                  require('../assets/wheels_Base_Color.jpg'),
+                  require('../assets/wheels_Metallic.jpg'),
+                  require('../assets/wheels_Roughness.jpg'),
+                  require('../assets/wheels_Normal_OpenGL.jpg'),
                 ]}/>
             </ViroNode>
           </ViroNode>
@@ -239,13 +239,13 @@ export default class ARScene extends Component {
             position={[.610, .363, -1.336]} >
             <ViroNode ref={(wheel)=>{this.frontRightWheel = wheel}} >
               <Viro3DObject
-                source={require('./res/car_wheels.vrx')}
+                source={require('../assets/car_wheels.vrx')}
                 type='VRX'
                 resources={[
-                  require('./res/wheels_Base_Color.jpg'),
-                  require('./res/wheels_Metallic.jpg'),
-                  require('./res/wheels_Roughness.jpg'),
-                  require('./res/wheels_Normal_OpenGL.jpg'),
+                  require('../assets/wheels_Base_Color.jpg'),
+                  require('../assets/wheels_Metallic.jpg'),
+                  require('../assets/wheels_Roughness.jpg'),
+                  require('../assets/wheels_Normal_OpenGL.jpg'),
                 ]}/>
             </ViroNode>
           </ViroNode>
@@ -254,14 +254,14 @@ export default class ARScene extends Component {
           <ViroNode ref={(wheel)=>{this.rearLeftWheel = wheel}}
             position={[-.610, .363, 1.355]} >
             <Viro3DObject
-              source={require('./res/car_wheels.vrx')}
+              source={require('../assets/car_wheels.vrx')}
               type='VRX'
               rotation={[0, 180, 0]} // the left wheels need to be rotated 180
               resources={[
-                require('./res/wheels_Base_Color.jpg'),
-                require('./res/wheels_Metallic.jpg'),
-                require('./res/wheels_Roughness.jpg'),
-                require('./res/wheels_Normal_OpenGL.jpg'),
+                require('../assets/wheels_Base_Color.jpg'),
+                require('../assets/wheels_Metallic.jpg'),
+                require('../assets/wheels_Roughness.jpg'),
+                require('../assets/wheels_Normal_OpenGL.jpg'),
               ]}/>
           </ViroNode>
 
@@ -269,13 +269,13 @@ export default class ARScene extends Component {
           <ViroNode ref={(wheel)=>{this.rearRightWheel = wheel}}
             position={[.610, .363, 1.355]} >
             <Viro3DObject
-              source={require('./res/car_wheels.vrx')}
+              source={require('../assets/car_wheels.vrx')}
               type='VRX'
               resources={[
-                require('./res/wheels_Base_Color.jpg'),
-                require('./res/wheels_Metallic.jpg'),
-                require('./res/wheels_Roughness.jpg'),
-                require('./res/wheels_Normal_OpenGL.jpg'),
+                require('../assets/wheels_Base_Color.jpg'),
+                require('../assets/wheels_Metallic.jpg'),
+                require('../assets/wheels_Roughness.jpg'),
+                require('../assets/wheels_Normal_OpenGL.jpg'),
               ]}/>
           </ViroNode>
 
@@ -498,7 +498,7 @@ export default class ARScene extends Component {
 
 ViroMaterials.createMaterials({
   dropShadow: {
-    diffuseTexture: require('./res/car_shadow.png'),
+    diffuseTexture: require('../assets/car_shadow.png'),
     lightingModel: "Constant",
     blendMode : 'Subtract',
   },
@@ -507,14 +507,4 @@ ViroMaterials.createMaterials({
   }
 });
 
-var styles = StyleSheet.create({
-  helloWorldTextStyle: {
-    fontFamily: 'Arial',
-    fontSize: 30,
-    color: '#ffffff',
-    textAlignVertical: 'center',
-    textAlign: 'center',  
-  },
-});
-
-module.exports = ARDrivingCarScene;
+export default ARScene;
