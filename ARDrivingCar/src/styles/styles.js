@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     fontFamily : 'BebasNeue-Regular',
   },
   instructionText : {
-    color : 'white',
+    color : colors.white,
     fontSize : 18,
     textAlign : 'center',
     fontFamily : 'BebasNeue-Regular',
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor : colors.transparent,
   },
   buttonText: {
-    color: colors.white,
+    color: colors.button,
     textAlign:'center',
     fontSize : 20
   },
