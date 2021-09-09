@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target 'arbot' do
+target 'ardrivingcar' do
   config = use_native_modules!
 
   use_react_native!(
@@ -15,7 +15,7 @@ target 'arbot' do
   pod 'ViroReact', :path => '../node_modules/@viro-community/react-viro/ios/'
   pod 'ViroKit_static_lib', :path => '../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/static_lib'
 
-  target 'arbotTests' do
+  target 'ardrivingcarTests' do
     inherit! :complete
     # Pods for testing
   end

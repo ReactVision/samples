@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.equationalapplications.arbot",
+    package = "com.myviroapp.ardrivingcar",
 )
 
 android_resource(
     name = "res",
-    package = "com.equationalapplications.arbot",
+    package = "com.myviroapp.ardrivingcar",
     res = "src/main/res",
 )
 
