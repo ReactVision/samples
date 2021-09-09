@@ -7,34 +7,17 @@
 
  import {
   ViroARScene,
-  ViroText,
   ViroConstants,
-  ViroARImageMarker,
   Viro3DObject,
   ViroAmbientLight,
-  ViroMaterialVideo,
   ViroMaterials,
-  ViroAnimations,
   ViroNode,
-  ViroPortal,
-  ViroPortalScene,
-  Viro360Video,
-  Viro360Image,
-  ViroVideo,
-  ViroDirectionalLight,
   ViroLightingEnvironment,
   ViroImage,
   ViroSound,
-  ViroParticleEmitter,
-  ViroSpotLight,
   ViroQuad,
-  ViroBox,
 } from '@viro-community/react-viro';
 
-import distanceBetween from '../utilities/distanceBetween';
-import colors from '../styles/colors';
-import styles from '../styles/styles'
-import renderIf from '../utilities/renderIf'
 const carScale = .1; // this is the scale of the car
 
 // NOTE: make sure friction != drivingAcceleration!
