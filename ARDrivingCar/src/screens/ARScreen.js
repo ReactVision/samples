@@ -9,7 +9,7 @@ import {
   Text,
   View,
   StyleSheet,
-  TouchableOpacity,
+  Pressable,
   Animated,
   Easing,
   Image,
@@ -198,12 +198,12 @@ return (
 
 getResetButton() {
 return (
-  <TouchableOpacity
+  <Pressable
     style={styles.resetButton}
     onPress={this.resetCar}
     activeOpacity={0.6} >
     <Image style={styles.resetImage} source={require('../assets/icon_refresh.png')}/>
-  </TouchableOpacity>
+  </Pressable>
 )
 }
 
@@ -338,7 +338,7 @@ if (this.state.showInstructions) {
         <Text style={styles.instructionText}>
           {text}
         </Text>
-        <TouchableOpacity
+        <Pressable
           style={readyButton}
           opacity={.5}
           onPress={this.ready}
@@ -347,7 +347,7 @@ if (this.state.showInstructions) {
           <Text style={styles.instructionText}>
             Place
           </Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </Animated.View>
   )
@@ -363,6 +363,7 @@ ready() {
   Animated.timing(this.state.instructionOpacity, {
     toValue : 0,
     duration : 1000,
+    useNativeDriver: true,
     easing : Easing.linear,
   }).start(()=>{
     this.setState({
@@ -375,6 +376,7 @@ ready() {
     Animated.timing(this.state.carControlsOpacity, {
       toValue : 1,
       duration : 500,
+      useNativeDriver: true,
       easing : Easing.linear,
     }).start()
   }, 1000)
