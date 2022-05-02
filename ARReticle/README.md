@@ -2,8 +2,8 @@
 
 Example code for using a reticle for object placement. The reticle is a quad in the center of the field of view which uses camera hit testing to find the horizontal plane. Press the reticle to place the object.
 
-Adapted from original code from here: 
-https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
+Adapted from original code from here:
+https://github.com/viromedia/viro/tree/master/code-samples/js/ARDrivingCarDemo
 
 ## Installation
 
@@ -14,4 +14,3 @@ https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
 5. `npx react-native run-android` or `npx react-native run-ios`
 
 NOTE: The variant arguments are not needed for debug or release.
-

@@ -1,7 +1,7 @@
 # AR Driving Car
 
-Adapted from original code from here: 
-https://github.com/viromedia/viro/tree/master/js/ARDrivingCarDemo
+Adapted from original code from here:
+https://github.com/viromedia/viro/tree/master/code-samples/js/ARDrivingCarDemo
 
 ## Installation
 
